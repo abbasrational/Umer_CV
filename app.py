@@ -93,7 +93,8 @@ st.write("02/2013 - 08/2017 (CGPA:2.3)")
 st.write('\n')
 st.subheader("Work Experience ")
 st.markdown("<h3 style='font-size: 20px'>Engineering Development Board</h3>", unsafe_allow_html=True)
-st.write("03/2020 - 03/2022")
+st.write("Trainee Engineer")
+st.write("***03/2020 - 03/2022***")
 st.write(
     """
 - ✔️ Conducting predictive trade analysis for Pakistan and key international markets (China, USA, Afghanistan, Sri Lanka, etc.). 
@@ -105,7 +106,8 @@ st.write(
 )
 st.write('\n')
 st.markdown("<h3 style='font-size: 20px'>PTCL (Pakistan Telecommunication Company Ltd)</h3>", unsafe_allow_html=True)
-st.write("10/2017 - 04/2018") 
+st.write("Network Support Engineer")
+st.write("***10/2017 - 04/2018***") 
 st.write(
     """
 - ✔️ Visualized and understand the working of PDH, SDH, DWDM and MPLS technologies of transmission. 
