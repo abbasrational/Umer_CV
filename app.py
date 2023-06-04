@@ -105,7 +105,7 @@ st.write(
 """
 )
 st.write('\n')
-st.markdown("👨‍💻","**Network Support Engineer | PTCL (Pakistan Telecommunication Company Ltd)**")
+st.markdown("**Network Support Engineer | PTCL (Pakistan Telecommunication Company Ltd)**")
 #st.write("**Network Support Engineer**")
 st.write("10/2017 - 04/2018") 
 st.write(
