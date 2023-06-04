@@ -92,7 +92,7 @@ st.write("02/2013 - 08/2017 (CGPA:2.3)")
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
 st.subheader("Work Experience ")
-st.markdown("👨🏼‍🔧","<h3 style='font-size: 20px'>Trainee Engineer | Engineering Development Board</h3>", unsafe_allow_html=True)
+st.markdown("👨🏼‍🔧","**Trainee Engineer | Engineering Development Board**")
 #st.write("**Trainee Engineer**")
 st.write("03/2020 - 03/2022")
 st.write(
@@ -105,7 +105,7 @@ st.write(
 """
 )
 st.write('\n')
-st.markdown('👨‍💻',"<h3 style='font-size: 20px'>Network Support Engineer | PTCL (Pakistan Telecommunication Company Ltd)</h3>", unsafe_allow_html=True)
+st.markdown("👨‍💻","**Network Support Engineer | PTCL (Pakistan Telecommunication Company Ltd)**")
 #st.write("**Network Support Engineer**")
 st.write("10/2017 - 04/2018") 
 st.write(
