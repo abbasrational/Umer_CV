@@ -92,7 +92,7 @@ st.write("02/2013 - 08/2017 (CGPA:2.3)")
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
 st.subheader("Work Experience ")
-st.markdown("👩🏻‍🏭","**Trainee Engineer | Engineering Development Board**")
+st.markdown("**Trainee Engineer | Engineering Development Board**")
 #st.write("**Trainee Engineer**")
 st.write("03/2020 - 03/2022")
 st.write(
