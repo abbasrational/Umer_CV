@@ -52,12 +52,12 @@ with col1:
 with col2:
     st.header(NAME)
     st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=resume_file.name,
-        mime="application/octet-stream",
-    )
+    # st.download_button(
+    #     label=" 📄 Download Resume",
+    #     data=PDFbyte,
+    #     file_name=resume_file.name,
+    #     mime="application/octet-stream",
+    # )
     st.write("📫", EMAIL)
     st.write ("📱", PHONE)
     
@@ -92,6 +92,19 @@ st.write("02/2013 - 08/2017 (CGPA:2.3)")
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
 st.subheader("Work Experience ")
+st.write('\n')
+st.markdown("**Technical Associate (Intern) | Engineering Development Board**")
+#st.write("**Technical Associate (Intern)**")
+st.write("July-23 - Present")
+st.write(
+    """
+- ✔️ Playing an integral role in evaluating and recommending strategies for maximizing energy resources and sustainability in the Pakistani context, aligning with national energy goals and policies.
+- ✔️ Designed a merit order system for power plants to optimize their operational sequence for efficiency and cost-effectiveness.
+- ✔️ Conducted in-depth analysis and implementation of Time of Use Tariff (TOU) structures, comparing and determining hourly, monthly, and seasonal demand variations.
+- ✔️ Utilized the PLOXOS optimization tool to forecast and strategize the future displacement of power plants, considering factors such as power output (MW), cost optimization, fuel efficiency, and overall system optimization. 
+"""
+)
+st.write('\n')
 st.markdown("**Trainee Engineer | Engineering Development Board**")
 #st.write("**Trainee Engineer**")
 st.write("03/2020 - 03/2022")
