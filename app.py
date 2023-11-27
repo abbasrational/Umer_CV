@@ -93,7 +93,7 @@ st.write("02/2013 - 08/2017 (CGPA:2.3)")
 st.write('\n')
 st.subheader("Work Experience ")
 st.write('\n')
-st.markdown("**Technical Associate (Intern) | Engineering Development Board**")
+st.markdown("**Technical Associate (Intern) | Central Power Purchasing Agency (CPPA-G)**")
 #st.write("**Technical Associate (Intern)**")
 st.write("July-23 - Present")
 st.write(
