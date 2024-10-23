@@ -5,8 +5,7 @@ df=pd.read_excel('app.xlsx')
 
 st.write("## Contact Info")
 
-# Streamlit app layout
-st.title('Email Filter and Download App')
+
 
 # Create multiselect options for filtering by columns
 filter_column = st.selectbox('Select column to filter', df.columns)
