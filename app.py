@@ -1,27 +1,22 @@
 import streamlit as st
+import os
 
 st.title("TIFF File Hosting")
 
-# File name (must be a STRING)
 file_name = "F8 Test.tif"
+file_path = os.path.join("static", file_name)
 
-st.write(f"Your file is hosted here: `{file_name}`")
+if os.path.exists(file_path):
+    with open(file_path, "rb") as f:
+        st.download_button(
+            "Download TIFF File",
+            f,
+            file_name=file_name,
+            mime="image/tiff"
+        )
+else:
+    st.error("File not found in static folder.")
 
-# Download button
-with open(f"static/{file_name}", "rb") as f:
-    st.download_button(
-        label="Download TIFF File",
-        data=f,
-        file_name=file_name,
-        mime="image/tiff"
-    )
-
-st.markdown("---")
-st.write("Direct URL to your file:")
-
-st.write(
-    "https://umermeritorderapp-lgwmzn5d44ztxapsgp8qec.streamlit.app/static/F8%20Test.tif"
-)
 
 
 
