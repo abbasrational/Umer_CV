@@ -1,45 +1,99 @@
 import streamlit as st
-import pandas as pd
-df=pd.read_excel('app.xlsx')
 
+st.title("TIFF File Hosting")
 
-st.write("## Contact Info")
+# Show the file name
+file_name = "F8 Test.tif"
+st.write(f"Your file is hosted here: `{F8 Test}`")
 
-
-# Create multiselect options for filtering by columns
-filter_column = st.selectbox('Select column to filter', df.columns)
-
-# Dropdown filter: Select one or more unique values from the column
-selected_values = st.multiselect(f'Select {filter_column} value(s)', df[filter_column].unique())
-
-# Text-based search input: Provide additional refinement through case-insensitive search
-search_value = st.text_input(f'Enter value to search in {filter_column} (case-insensitive)')
-
-# Apply both dropdown and text-based filters
-filtered_df = df.copy()
-
-# Apply dropdown filter if values are selected
-if selected_values:
-    filtered_df = filtered_df[filtered_df[filter_column].isin(selected_values)]
-
-# Apply text-based search filter if a search term is provided
-if search_value:
-    filtered_df = filtered_df[filtered_df[filter_column].str.contains(search_value, case=False, na=False)]
-
-# Show filtered dataframe
-st.write('Filtered Data:', filtered_df)
-
-# Prepare email list for download
-if not filtered_df.empty:
-    email_list = filtered_df['Email ID'].to_list()
-    email_str = "\n".join(email_list)
-
-    # Button to download email list as a .txt file
+# Provide a download button
+with open(f"static/{F8 Test}", "rb") as f:
     st.download_button(
-        label="Download Emails",
-        data=email_str,
-        file_name="filtered_emails.txt",
-        mime="text/plain"
+        label="Download TIFF File",
+        data=f,
+        file_name=file_name,
+        mime="image/tiff"
     )
-else:
-    st.write("No data to display or download.")
+
+st.markdown("---")
+st.write("Direct URL to your file:")
+st.write(f"https://<F88>.streamlit.app/static/{F8 Test}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import streamlit as st
+# import pandas as pd
+# df=pd.read_excel('app.xlsx')
+
+
+# st.write("## Contact Info")
+
+
+# # Create multiselect options for filtering by columns
+# filter_column = st.selectbox('Select column to filter', df.columns)
+
+# # Dropdown filter: Select one or more unique values from the column
+# selected_values = st.multiselect(f'Select {filter_column} value(s)', df[filter_column].unique())
+
+# # Text-based search input: Provide additional refinement through case-insensitive search
+# search_value = st.text_input(f'Enter value to search in {filter_column} (case-insensitive)')
+
+# # Apply both dropdown and text-based filters
+# filtered_df = df.copy()
+
+# # Apply dropdown filter if values are selected
+# if selected_values:
+#     filtered_df = filtered_df[filtered_df[filter_column].isin(selected_values)]
+
+# # Apply text-based search filter if a search term is provided
+# if search_value:
+#     filtered_df = filtered_df[filtered_df[filter_column].str.contains(search_value, case=False, na=False)]
+
+# # Show filtered dataframe
+# st.write('Filtered Data:', filtered_df)
+
+# # Prepare email list for download
+# if not filtered_df.empty:
+#     email_list = filtered_df['Email ID'].to_list()
+#     email_str = "\n".join(email_list)
+
+#     # Button to download email list as a .txt file
+#     st.download_button(
+#         label="Download Emails",
+#         data=email_str,
+#         file_name="filtered_emails.txt",
+#         mime="text/plain"
+#     )
+# else:
+#     st.write("No data to display or download.")
