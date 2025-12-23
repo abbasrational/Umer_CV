@@ -2,12 +2,13 @@ import streamlit as st
 
 st.title("TIFF File Hosting")
 
-# Show the file name
+# File name (must be a STRING)
 file_name = "F8 Test.tif"
-st.write(f"Your file is hosted here: `{F8 Test}`")
 
-# Provide a download button
-with open(f"static/{F8 Test}", "rb") as f:
+st.write(f"Your file is hosted here: `{file_name}`")
+
+# Download button
+with open(f"static/{file_name}", "rb") as f:
     st.download_button(
         label="Download TIFF File",
         data=f,
@@ -17,7 +18,11 @@ with open(f"static/{F8 Test}", "rb") as f:
 
 st.markdown("---")
 st.write("Direct URL to your file:")
-st.write(f"https://<F88>.streamlit.app/static/{F8 Test}")
+
+st.write(
+    "https://umermeritorderapp-lgwmzn5d44ztxapsgp8qec.streamlit.app/static/F8%20Test.tif"
+)
+
 
 
 
